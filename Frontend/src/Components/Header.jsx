@@ -19,7 +19,7 @@ const Header = () => {
           <a href="/Home" className="hover:text-blue-600 transition-colors">Home</a>
           <a href="/Routes" className="hover:text-blue-600 transition-colors">Routes</a>
           <a href="#" className="hover:text-blue-600 transition-colors">About Us</a>
-          <a href="#" className="hover:text-blue-600 transition-colors">Queries</a>
+          <a href="/queries" className="hover:text-blue-600 transition-colors">Queries</a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ const Header = () => {
         <a href="/Home" className="block text-gray-700 hover:text-blue-600 transition-colors">Home</a>
         <a href="/Routes" className="block text-gray-700 hover:text-blue-600 transition-colors">Routes</a>
         <a href="#" className="block text-gray-700 hover:text-blue-600 transition-colors">About Us</a>
-        <a href="#" className="block text-gray-700 hover:text-blue-600 transition-colors">Queries</a>
+        <a href="/queries" className="block text-gray-700 hover:text-blue-600 transition-colors">Queries</a>
       </div>
     </header>
   )

@@ -5,7 +5,7 @@ import { ArrowDownUp,Mic } from "lucide-react";
 import VoiceSearch from "./VoiceSearch.jsx";
 import Detail from "../Pages/Detail.jsx";
 
-const Card = () => {
+const  Card = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [Buses, setBuses] = useState([]);

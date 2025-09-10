@@ -4,15 +4,21 @@ const Hero_Section = () => {
   return (
     <div>
         <header className="text-center py-16 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
-        <h2 className="text-4xl font-bold mb-4">Track, Manage & Ride Smarter</h2>
-        <p className="max-w-2xl mx-auto text-lg">
-          A modern platform for real-time bus tracking, seat availability, and passenger monitoring.
-        </p>
-        <button className="mt-6 px-6 py-3 bg-black text-white rounded-lg shadow hover:scale-105 transition">
-          Get Started
-        </button>
-      </header>
+          <h2 className="text-4xl font-bold mb-4">
+            Track, Manage & Ride Smarter
+          </h2>
 
+          <p className="max-w-2xl mx-auto text-lg">
+            A modern platform for real-time bus tracking, seat availability, and passenger monitoring.
+          </p>
+
+          <a
+            href="/Routes"
+            className="mt-6 px-6 btn btn-active py-3 bg-black text-white rounded-lg shadow hover:scale-105 transition"
+          >
+            Get Started
+          </a>
+        </header>
       {/* Features Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
         <h3 className="text-3xl font-bold text-center mb-12">Key Features</h3>
