@@ -12,7 +12,7 @@ const Detail = ({ selectBusNumber }) => {
         setLoading(true);
         setError("");
         const res = await axios.get(
-          `http://localhost:3000/getBuses/${selectBusNumber}`
+          `https://bus-service-system.onrender.com/getBuses/${selectBusNumber}`
         );
 
         if (res.data) {
