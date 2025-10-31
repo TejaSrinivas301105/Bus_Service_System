@@ -1,63 +1,76 @@
 import React from 'react'
 import { Bus, MapPin, Users, Database } from "lucide-react";
+
 const Hero_Section = () => {
   return (
-    <div>
-        <header className="text-center py-16 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
-          <h2 className="text-4xl font-bold mb-4">
-            Track, Manage & Ride Smarter
-          </h2>
+    <div className="pt-20"> {/* added top padding to offset fixed header */}
+      
+      {/* Hero Header */}
+      <header className="text-center py-24 bg-gradient-to-r from-blue-900 via-blue-800 to-amber-600 text-white shadow-2xl relative overflow-hidden">
+        {/* Glow Layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-20 blur-2xl"></div>
 
-          <p className="max-w-2xl mx-auto text-lg">
-            A modern platform for real-time bus tracking, seat availability, and passenger monitoring.
-          </p>
+        <h2 className="relative text-5xl font-extrabold mb-6 drop-shadow-[0_3px_10px_rgba(0,0,0,0.3)] bg-gradient-to-r from-amber-300 via-yellow-200 to-white bg-clip-text text-transparent tracking-wide">
+          Track, Manage & Ride Smarter
+        </h2>
+        <p className="relative max-w-2xl mx-auto text-lg opacity-90 text-gray-100 drop-shadow-md">
+          A modern platform for real-time bus tracking, seat availability, and passenger monitoring.
+        </p>
+        <a
+          href="/routes"
+          className="relative mt-10 inline-block px-10 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          Get Started
+        </a>
+      </header>
 
-          <a
-            href="/Routes"
-            className="mt-6 px-6 btn btn-active py-3 bg-black text-white rounded-lg shadow hover:scale-105 transition"
-          >
-            Get Started
-          </a>
-        </header>
-      {/* Features Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h3 className="text-3xl font-bold text-center mb-12">Key Features</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 bg-white shadow rounded-xl text-center hover:shadow-lg transition">
-            <Bus className="mx-auto text-amber-600 w-12 h-12 mb-4" />
-            <h4 className="font-semibold text-lg mb-2">Available Buses</h4>
-            <p className="text-sm text-gray-600">
-              Check buses operating between your selected routes in real-time.
-            </p>
-          </div>
+      {/* Key Features Section */}
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+      <h3 className="text-4xl font-bold text-center mb-14 from-blue-900 via-blue-800 to-amber-600 text-white shadow-2xl tracking-tight">
+  Key Features
+</h3>
 
-          <div className="p-6 bg-white shadow rounded-xl text-center hover:shadow-lg transition">
-            <MapPin className="mx-auto text-amber-600 w-12 h-12 mb-4" />
-            <h4 className="font-semibold text-lg mb-2">Route Information</h4>
-            <p className="text-sm text-gray-600">
-              Get detailed information about starting points and destinations.
-            </p>
-          </div>
 
-          <div className="p-6 bg-white shadow rounded-xl text-center hover:shadow-lg transition">
-            <Users className="mx-auto text-amber-600 w-12 h-12 mb-4" />
-            <h4 className="font-semibold text-lg mb-2">Passenger Count</h4>
-            <p className="text-sm text-gray-600">
-              View real-time passenger data and available seats instantly.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white shadow rounded-xl text-center hover:shadow-lg transition">
-            <Database className="mx-auto text-amber-600 w-12 h-12 mb-4" />
-            <h4 className="font-semibold text-lg mb-2">IoT Integration</h4>
-            <p className="text-sm text-gray-600">
-              Powered by ESP32 sensors and live updates from the database.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {[
+            {
+              icon: <Bus className="w-10 h-10" />,
+              title: "Available Buses",
+              desc: "Check buses operating between your selected routes in real-time.",
+            },
+            {
+              icon: <MapPin className="w-10 h-10" />,
+              title: "Route Information",
+              desc: "Get detailed information about starting points and destinations.",
+            },
+            {
+              icon: <Users className="w-10 h-10" />,
+              title: "Passenger Count",
+              desc: "View real-time passenger data and available seats instantly.",
+            },
+            {
+              icon: <Database className="w-10 h-10" />,
+              title: "IoT Integration",
+              desc: "Powered by ESP32 sensors and live updates from the database.",
+            },
+          ].map((f, i) => (
+            <div
+              key={i}
+              className="p-8 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 text-center hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              <div className="flex justify-center mb-4 text-amber-400 drop-shadow-md">
+                {f.icon}
+              </div>
+              <h4 className="font-semibold text-lg mb-2 text-white tracking-wide">
+                {f.title}
+              </h4>
+              <p className="text-sm text-gray-200 opacity-90">{f.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Hero_Section
+export default Hero_Section;

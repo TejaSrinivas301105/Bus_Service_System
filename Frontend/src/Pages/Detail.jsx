@@ -30,6 +30,8 @@ const Detail = ({ selectBusNumber }) => {
 
     if (selectBusNumber) {
       fetchDetails();
+    }else{
+      setBusDetail(" ");
     }
   }, [selectBusNumber]);
 
@@ -49,7 +51,8 @@ const Detail = ({ selectBusNumber }) => {
     return null;
   }
 
-  return (
+    if(busDetail){
+      return (
     <div className="mt-8 max-w-lg mx-auto bg-gradient-to-br from-white to-gray-50 shadow-xl rounded-2xl p-8 border w-full border-gray-100  overflow-hidden">
       <h2 className="text-2xl font-bold text-indigo-600 mb-6 text-center">
         🚌 Bus {busDetail.BusNumber} Details
@@ -86,6 +89,7 @@ const Detail = ({ selectBusNumber }) => {
       </div>
     </div>
   );
+    }
 };
 
 export default Detail;
